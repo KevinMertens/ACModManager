@@ -1,6 +1,7 @@
 ﻿using ACModManager.Domain;
 using System;
 using System.IO;
+using System.IO.Compression;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
@@ -8,7 +9,9 @@ namespace ACModManager
 {
     public partial class Form1 : Form
     {
-        public static string FILE = "D:\\mod.xml";
+        public static string FILE = "D:\\ModManagerTest\\mod.xml";
+        public static string ZIPFILE = "D:\\ModManagerTest\\Mak_Corp_IFS3_AC_0.6.zip";
+        public static string ACDIR = @"D:\Assetto Corsa";
         private Mod mod;
         public Form1()
         {
@@ -41,6 +44,26 @@ namespace ACModManager
             StreamWriter file = new StreamWriter(FILE);
             writer.Serialize(file, mod);
             file.Close();
+        }
+
+        private void buttonUnzip_Click(object sender, EventArgs e)
+        {
+            /*using (var file = File.OpenRead(ZIPFILE))
+            using (var zip = new ZipArchive(file, ZipArchiveMode.Read))
+            {
+                foreach (var entry in zip.)
+                {
+                    using (var stream = entry.Open())
+                    {
+                        if (entry.FullName.EndsWith("/content/"))
+                        {
+                            entry.(ACDIR);
+                        }
+                    }
+                }
+            }*/
+
+            ZipFile.ExtractToDirectory(ZIPFILE, ACDIR);
         }
     }
 }

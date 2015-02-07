@@ -43,6 +43,7 @@
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonUnzip = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -150,7 +151,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(122, 166);
+            this.buttonSave.Location = new System.Drawing.Point(94, 165);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 15;
@@ -158,11 +159,22 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // buttonUnzip
+            // 
+            this.buttonUnzip.Location = new System.Drawing.Point(12, 195);
+            this.buttonUnzip.Name = "buttonUnzip";
+            this.buttonUnzip.Size = new System.Drawing.Size(75, 23);
+            this.buttonUnzip.TabIndex = 16;
+            this.buttonUnzip.Text = "Unzip";
+            this.buttonUnzip.UseVisualStyleBackColor = true;
+            this.buttonUnzip.Click += new System.EventHandler(this.buttonUnzip_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(219, 200);
+            this.ClientSize = new System.Drawing.Size(219, 242);
+            this.Controls.Add(this.buttonUnzip);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.comboBoxType);
@@ -200,6 +212,7 @@
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonUnzip;
     }
 }
 
